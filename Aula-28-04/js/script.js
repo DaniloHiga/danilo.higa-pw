@@ -1,3 +1,4 @@
+//Média
 var media = parseInt(prompt("Digite sua média: "));
 var nome = prompt("Digite seu nome: ");
 console.log(typeof nome)
@@ -17,4 +18,22 @@ else if (isNaN(media)){
 }
 else{
     console.log(nome, "Reprovado!");
+}
+
+//Maior de idade
+var idade = parseInt(prompt("Digite sua idade: "))
+console.log(nome, "tem" ,idade, "anos")
+if (idade<18){
+    console.log("Você é menor de idade!")
+}
+else {
+    console.log("Você é maior de idade!")
+}
+//Par ou Impar
+var x = parseInt(prompt("Digite um número: "));
+if (x%2==0){
+    console.log("O número" ,x, "é par!")
+}
+else {
+    console.log("O número" ,x, "é ímpar!")
 }

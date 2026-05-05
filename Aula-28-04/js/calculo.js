@@ -19,3 +19,10 @@ function dividir() {
         resultado.innerHTML = Number(n1.value) / Number(n2.value);
     }
 }
+
+function areatriangulo() {
+    resultado.innerHTML = (Number(n1.value) + Number(n2.value)) / 2;
+}
+function areaquadrado() {
+    resultado.innerHTML = Number(n1.value) * Number(n2.value)
+}
