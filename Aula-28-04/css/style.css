@@ -6,13 +6,38 @@
 
 /*Corpo*/
 body {
-    font-family: Arial, sans-serif;
-    background-color: #b7dcf5;
+    font-family: Arial;
+    background-color: #b7d8f5;
 }
 
 /*Título*/
 h1 {
     text-align: center;
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(250, 240, 240);
     padding: 15px;
+}
+
+p {
+    font-size: 21px;
+    background-color: rgb(127, 172, 255);
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin-left: auto;  
+    margin-right: auto;
+    padding: 7px;
+    width: 200px;
+}
+
+button {
+    display: block;
+    margin: auto;
+    font-size: 15px;
+    width: 250px;
+}
+
+tr {
+    align-items: center;
 }
