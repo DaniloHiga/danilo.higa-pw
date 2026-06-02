@@ -20,17 +20,19 @@
             <th>Total</th>
         </tr>
         <tr>
-            <td> <img src="imagens/celular.png" alt="celular"> </td>
+            <td> <a href="celular.html"> <img src="imagens/celular.png" alt="celular"> </a> </td>
             <td>Samsung Galaxy A17 <br> 
                 Cor: Azul <br>
                 Código 1234#LC
             </td>
-            <td id="preço1">R$1424,00</td>
-            <td><button class="btnMenos">-</button>
-            <span id="qtd1">0</span>
-            <button class="btnMais"+</button>
+            <td id="valor1">1424,00</td>
+            <td><button class="btnMenos" onclick="altQtd('qtd1', 'valor1', 'total1', -1)">-</button>
+                <span id="qtd1">0</span>
+                <button class="btnMais" onclick="altQtd('qtd1', 'valor1', 'total1', 1)">+</button>
             </td>
-            <td></td>
+            <td>
+                <span id="total1">R$0.00</span>
+            </td>
         </tr>
         <tr> 
             <td> <img src="imagens/tv.png" alt="tv"> </td>
@@ -38,11 +40,13 @@
                 Cor: Preto <br>
                 Código 5678#LC
             </td>
-            <td id="preço2">R$8399,99</td>
-            <td><button class="btnMenos">-</button>
-            <span id="qtd2">0</span>
-            <button class="btnMais">+</button></td>
-            <td></td>
+            <td id="valor2">8399,99</td>
+            <td><button class="btnMenos" onclick="altQtd('qtd2', 'valor2', 'total2', -1)">-</button>
+                <span id="qtd2">0</span>
+                <button class="btnMais" onclick="altQtd('qtd2', 'valor2', 'total2', 1)">+</button></td>
+            <td>
+                <span id="total2">R$0.00</span> 
+            </td>
         </tr>
         <tr>
             <td> <img src="imagens/note.png" alt="notebook"> </td>
@@ -50,16 +54,18 @@
                 Cor: Cinza <br>
                 Código 91011#LC
             </td>
-            <td id="preço3">R$4899,00</td>
-            <td><button class="btnMenos">-</button>
-            <span id="qtd3">0</span>
-            <button class="btnMais">+</button></td>
-            <td></td>
+            <td id="valor3">4899,00</td>
+            <td><button class="btnMenos" onclick="altQtd('qtd3', 'valor3', 'total3', -1)">-</button>
+                <span id="qtd3">0</span>
+                <button class="btnMais" onclick="altQtd('qtd3', 'valor3', 'total3', 1)">+</button></td>
+            <td>
+                <span id="total3">R$0.00</span>
+            </td>
         </tr>
     </table>
     <h2 class>
     <img src="imagens/h2.png" alt="carrinho">
-    Subtotal:
+    <span id="Subtotal">Subtotal: R$0.00</span>
     </h2>
 
 <script src="js/script.js"></script>
