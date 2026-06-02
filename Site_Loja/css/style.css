@@ -1,0 +1,70 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+}
+
+div {
+    border: 5px dotted orangered;
+    padding: 7px; 
+    margin-bottom: 15px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.h1 img {
+    height: 30px;
+    width: 30px;
+}
+
+.h1 {
+    text-align: justify;    
+    font-size:28px;
+    font-weight: bold;
+}
+
+table {
+    margin-left: 200px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid black;
+}
+td {
+    padding: 10px;
+    padding-right: 180px;
+    border: 1px solid black;
+}
+td img {
+    height: 190px;
+    width: 190px;
+}
+
+h2 {
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
+    font-weight: normal;
+    background-color: rgb(87, 86, 86);
+}
+h2 img {
+    height: 30px;
+    width: 30px;
+}
+
+.btnMenos { 
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}
+.btnMais {
+    height: 25px;
+    width: 25px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
