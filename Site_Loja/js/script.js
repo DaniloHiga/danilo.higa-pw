@@ -14,7 +14,7 @@ let preço = parseFloat(document.getElementById(precold).innerText);
 
 let total = quantidade*preço;
 
-document.getElementById(totalId).innerText = "R$" + total.toFixed(2);
+document.getElementById(totalId).innerText = total.toFixed(2);
 
 function calcularSubtotal() {
     let total1=parseFloat(document.getElementById("total1").innerText);
