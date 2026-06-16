@@ -1,8 +1,59 @@
-div {
-    padding: 7px; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Segoe UI", sans-serif;
+}
+.header {
     margin-bottom: 20px;
+    background-color: orangered;
+    color: white;
+    text-align: justify;    
+    font-size:28px;
+    font-weight: bold; 
 }
 .header img {
     height: 60px;
     width: 60px;
+    color: white;
+}
+.produto {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    border: 3px dotted black;
+}
+
+.produto img {
+    width: 360px; 
+    border: 3px dotted black;
+}
+
+.produto h1 {
+    margin: 0;
+    font-size: 35px;
+}
+h2 {
+    margin-left: 20%;
+    text-align: justify;
+}
+h3 {
+    margin-left: 20%;
+    text-align: justify;
+}
+.btnMenos { 
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}
+.btnMais {
+    height: 25px;
+    width: 25px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
 }

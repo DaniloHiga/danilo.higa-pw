@@ -53,18 +53,3 @@ h2 img {
     height: 30px;
     width: 30px;
 }
-
-.btnMenos { 
-    height: 25px;
-    width: 25px;
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-}
-.btnMais {
-    height: 25px;
-    width: 25px;
-    background-color: green;
-    color: white;
-    border-radius: 5px;
-}
