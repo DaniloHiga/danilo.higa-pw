@@ -48,29 +48,37 @@ tr.innerHTML = `
     <td>${item.funcao}</td>
     <td>R$ ${item.salario}</td>
     <td class="acao">
-        <button onclick="editItem(${index})"><i class='bx bx-edit'
-        ></i></button>
+        <button onclick="editItem(${index})">
+        <i class='bx bx-edit'></i>
+        </button>
     </td>
     <td class="acao">
-        <button onclick="deleteItem(${index})"><i class='bx bx-trash'></i></button>
+        <button onclick="deleteItem(${index})">
+        <i class='bx bx-trash'></i>
+        </button>
         </td>
     `
 tbody.appendChild(tr)
 }
 
-btnSalvar.onclick = e => { if (sNome.value == '' || sFuncao.value == '' || sSalario.value == '')
-{
-    return
-}
+btnSalvar.onclick = e => { 
 
 e.preventDefault();
+
+if (
+        sNome.value === '' ||
+        sFuncao.value === '' ||
+        sSalario.value === ''
+    ) {
+        return
+    }
 
 if (id !== undefined) {
     itens[id].nome = sNome.value
     itens[id].funcao = sFuncao.value
     itens[id].salario = sSalario.value
 } else {
-    itens.push({'nome': sNome.value, 'funcao': sFuncao.value,'salario': sSalario.value})
+    itens.push({nome: sNome.value, funcao: sFuncao.value, salario: sSalario.value})
 }
 
 setItensBD()
@@ -87,9 +95,8 @@ function loadItens() {
     insertItem(item, index)
 })
 }
-const getItensBD = () => JSON.parse(localStorage.getItem('dbfunc')) ??
+const getItensBD = () => JSON.parse(localStorage.getItem('dbfunc')) ||
 []
-const setItensBD = () => localStorage.setItem('dbfunc',
-JSON.stringify(itens))
+const setItensBD = () => localStorage.setItem('dbfunc', JSON.stringify(itens))
 
-loadItens()
+loadItens() 
