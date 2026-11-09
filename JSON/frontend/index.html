@@ -2,6 +2,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script>
+    if (localStorage.getItem('logado') !== 'true') {
+        window.location.href = 'login.html';
+    }
+</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +17,7 @@
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
           rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -53,7 +59,7 @@
             </div>
         </div>
     </div>
-
+<button onclick="sair()" id="new">Sair</button>
     <script src="script.js"></script>
 </body>
 </html>

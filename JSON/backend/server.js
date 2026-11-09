@@ -64,8 +64,55 @@ res.json({ success: true });
 res.status(500).json({ error: error.message });
 }
 });
+app.post('/api/login', async (req, res) => {
+    try {
+        const { login, senha } = req.body;
+
+        if (!login || !senha) {
+            return res.status(400).json({
+                error: 'Login e senha são obrigatórios'
+            });
+        }
+
+        const [rows] = await db.execute(
+            'SELECT * FROM usuarios WHERE login = ?',
+            [login]
+        );
+
+        if (rows.length === 0) {
+            return res.status(401).json({
+                error: 'Login ou senha incorretos'
+            });
+        }
+
+        const usuario = rows[0];
+
+        const senhaValida = await bcrypt.compare(
+            senha,
+            usuario.senha
+        );
+
+        if (!senhaValida) {
+            return res.status(401).json({
+                error: 'Login ou senha incorretos'
+            });
+        }
+
+        res.json({
+            success: true,
+            message: 'Login realizado com sucesso!'
+        });
+
+    } catch (error) {
+        res.status(500).json({
+            error: error.message
+        });
+    }
+});
 const PORT = 3000;
+const bcrypt = require('bcrypt');
 app.listen(PORT, () => {
 console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
 console.log('Endpoints: /api/funcionarios (GET/POST/PUT/:id/DELETE/:id)');
 });
+// POST /api/login

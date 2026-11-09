@@ -215,3 +215,6 @@ font-size: 25px;
 td button i:first-child {
 margin-right: 10px;
 }
+#new {
+    cursor: pointer;
+}

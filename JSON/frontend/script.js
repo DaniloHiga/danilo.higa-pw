@@ -116,6 +116,9 @@ const getItensBD = async () => {
         return [];
     }
 };
-
+function sair() {
+    localStorage.removeItem('logado');
+    window.location.href = 'login.html';
+}
 // Carrega os funcionários ao iniciar
 loadItens();
